@@ -1,0 +1,22 @@
+const ethers = require('ethers')
+const provider = new ethers.providers.JsonRpcProvider("http://localhost:8123")
+abi = fs.readFileSync("/home/fgimenez/workspace/polygon-hermez/uniswap-demo/node_modules/@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json", "utf-8")
+
+abiJSON = JSON.parse(abi)
+iface = new ethers.utils.Interface(abiJSON.abi);
+abi = fs.readFileSync("/home/fgimenez/workspace/polygon-hermez/hermez-core/test/contracts/bin/ERC20/IERC20.abi", "utf-8")
+contract = new ethers.Contract("0x0ef3B0bC8D6313aB7dc03CF7225c872071bE1E6d", abi, provider);
+contract.address
+contract.allowance
+contract.allowance("0xC949254d682D8c9ad5682521675b8F43b102aec4")
+contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4")
+await contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4")
+value = await contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4")
+ethers.utils.formatEther(value)
+contract = new ethers.Contract("0x3A07588DefB088956a2e6dD15C33d63F2E0A2c55", abi, provider);
+value = await contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4")
+contract.totalSupply
+contract.totalSupply()
+await contract.totalSupply()
+value = await contract.totalSupply()
+ethers.utils.formatEther(value)
