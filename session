@@ -20,3 +20,86 @@ contract.totalSupply()
 await contract.totalSupply()
 value = await contract.totalSupply()
 ethers.utils.formatEther(value)
+abi = fs.readFileSync("/home/fgimenez/workspace/polygon-hermez/hermez-core/test/contracts/bin/ERC20/IERC20.abi", "utf-8")
+contract = new ethers.Contract("0x3A07588DefB088956a2e6dD15C33d63F2E0A2c55", abi, provider);
+await contract.allowance("0xC949254d682D8c9ad5682521675b8F43b102aec4", "0xCF8d64E23b68b39066522f891CfFBc6E3851a742")
+value = await contract.allowance("0xC949254d682D8c9ad5682521675b8F43b102aec4", "0xCF8d64E23b68b39066522f891CfFBc6E3851a742")
+ethers.utils.formatEther(value)
+contract = new ethers.Contract("0x0ef3B0bC8D6313aB7dc03CF7225c872071bE1E6d", abi, provider);
+value = await contract.allowance("0xC949254d682D8c9ad5682521675b8F43b102aec4", "0xCF8d64E23b68b39066522f891CfFBc6E3851a742")
+ethers.utils.formatEther(value)
+value = await contract.allowance("0xC949254d682D8c9ad5682521675b8F43b102aec4", "0xCF8d64E23b68b39066522f891CfFBc6E3851a742")
+contract.address
+contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4")
+await contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4")
+ethers.utils.formatEther(await contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4"))
+ethers.utils.formatEther(await contract.balanceOf("0xCF8d64E23b68b39066522f891CfFBc6E3851a742"))
+contract = new ethers.Contract("0x3A07588DefB088956a2e6dD15C33d63F2E0A2c55", abi, provider);
+ethers.utils.formatEther(await contract.balanceOf("0xCF8d64E23b68b39066522f891CfFBc6E3851a742"))
+ethers.utils.formatEther(await contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4"))
+providerl1 = new ethers.providers.JsonRpcProvider("http://localhost:8545")
+contract = new ethers.Contract("0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6", abi, providerl1);
+value = await contract.allowance("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266", "0x7a2088a1bFc9d81c55368AE168C2C02570cB814F")
+value = await contract.balanceOf("0x7a2088a1bFc9d81c55368AE168C2C02570cB814F")
+value = await contract.balanceOf("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")
+ethers.utils.formatEther(await contract.balanceOf("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"))
+contract.filters.Transfer()
+contract.filters.Transfer(null, "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266")
+abi
+let iface = new ethers.utils.Interface(abi);
+iface
+filter = {address: "0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6", fromBlock: 0}
+log = await provider.getLogs(filter)
+log
+log
+eventAbi = [ "event Transfer(address indexed from, address indexed to, uint value)" ];
+iface2 = new ethers.utils.Interface(abi);
+log = await provider.getLogs(filter)
+log = await provider.getLogs(filter)
+log = await provider.getLogs(filter)
+log = await provider.getLogs(filter)
+log = await provider.getLogs(filter)
+log = await provider.getLogs(filter)
+contract.filters.Transfer()
+contract.filters.Approval()
+log = await provider.getLogs(filter)
+log = provider.getLogs(filter)
+log = await provider.getLogs(filter)
+filter = {address: "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318", fromBlock: 0}
+log = await provider.getLogs(filter)
+contract = new ethers.Contract("0x3A07588DefB088956a2e6dD15C33d63F2E0A2c55", abi, provider);
+contract.totalSupply
+await contract.totalSupply()
+provider.getCode("0x3A07588DefB088956a2e6dD15C33d63F2E0A2c55")
+await provider.getCode("0x3A07588DefB088956a2e6dD15C33d63F2E0A2c55")
+await contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4")
+ethers.utils.formatEther(await contract.balanceOf("0xC949254d682D8c9ad5682521675b8F43b102aec4"))
+abi = fs.readFileSync("/home/fgimenez/workspace/polygon-hermez/uniswap-demo/node_modules/@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json", "utf-8")
+abiJSON = JSON.parse(abi)
+iface = new ethers.utils.Interface(abiJSON.abi);
+
+
+
+contract.address
+contract.balanceOf('0x14c0ae22dc105be5b99599bb62cd99704f5d2522')
+await contract.balanceOf('0x14c0ae22dc105be5b99599bb62cd99704f5d2522')
+abi = fs.readFileSync("/home/fgimenez/workspace/polygon-hermez/hermez-core/test/contracts/bin/ERC20/IERC20.abi", "utf-8")
+contract = new ethers.Contract("0x0ef3b0bc8d6313ab7dc03cf7225c872071be1e6d", abi, provider);
+await contract.balanceOf('0x14c0ae22dc105be5b99599bb62cd99704f5d2522')
+await provider.getCode
+await provider.getCode('0x14c0ae22dc105be5b99599bb62cd99704f5d2522')
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+await provider.getCode('0x14c0ae22dc105be5b99599bb62cd99704f5d2522')
+await provider.getCode('0x14c0ae22dc105be5b99599bb62cd99704f5d2522')
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+await provider.getCode('0x14c0AE22Dc105bE5B99599bB62cd99704F5D2522')
+await provider.getCode('0x14c0ae22dc105be5b99599bb62cd99704f5d2522')
+await provider.getCode('0x055Cfd083610e1e747172AcD3B2e8c06Bf4c1220')
+
